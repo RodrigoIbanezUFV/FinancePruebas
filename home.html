@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | FinanSmart</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top w-100">
+            <div class="container-fluid justify-content-between">
+
+                <!-- Logo + Marca -->
+                <a class="navbar-brand d-flex align-items-center" href="home.html">
+                    <img src="img/logo.png" alt="Logo FinanSmart" width="50" height="50" class="me-2">
+                    <span class="fs-4 fw-bold">FinanSmart</span>
+                </a>
+
+                <!-- Botón hamburguesa (responsive) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Opciones -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav d-flex align-items-center gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link btn-nav active" href="home.html" id="nav-home">
+                                <i class="fa-solid fa-house"></i> HOME
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-nav" href="user.html" id="nav-perfil">
+                                <i class="fa-solid fa-user"></i> PERFIL
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-nav" href="config.html" id="nav-config">
+                                <i class="fa-solid fa-gear"></i> CONFIGURACIÓN
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="home-content container py-5">
+            <h2 class="text-white fw-bold mb-5 text-center">Bienvenido de vuelta, <span id="user-nombre">Usuario</span>
+            </h2>
+
+            <!-- Bloque superior: gráfico + info financiera -->
+            <div class="row g-4 mb-5">
+                <!-- Columna izquierda: gráfica -->
+                <div class="col-md-6">
+                    <section class="grafica-section">
+                        <h3>Tus ahorros mensuales</h3>
+                        <canvas id="graficaAhorros" class="w-100" height="250"
+                            aria-label="Gráfico de ahorro mensual"></canvas>
+                    </section>
+                </div>
+
+                <!-- Columna derecha: plan financiero -->
+                <div class="col-md-6">
+                    <section class="plan-info">
+                        <h3>Tu Plan Financiero</h3>
+                        <p><strong>Método recomendado:</strong> <span id="metodo">...</span></p>
+                        <p><strong>Total ahorrado:</strong> <span id="total-ahorrado">...</span></p>
+                        <a href="config.html" class="btn btn-success mt-4 w-100">Añadir nueva entrada</a>
+                    </section>
+                </div>
+            </div>
+
+            <section class="mt-5 px-4">
+                <h4 class="text-white fw-bold mb-4">Nuestros métodos de ahorro principales:</h4>
+                <div class="row g-4">
+
+                    <!-- Método del 10 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-white bg-dark border-light shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Método del 10</h5>
+                                <p class="card-text">
+                                    <strong>Perfil:</strong> Personas con ingresos limitados.<br>
+                                    <strong>Distribución:</strong><br>
+                                    - 90% necesidades básicas<br>
+                                    - 10% ahorro<br>
+                                    <strong>Ventajas:</strong> Fácil de mantener.<br>
+                                    <strong>Objetivo:</strong> Crear el hábito del ahorro.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <a href="metodoMenor.html" class="btn btn-success w-100">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Método 50-30-20 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-white bg-dark border-light shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Método 50-30-20</h5>
+                                <p class="card-text">
+                                    <strong>Perfil:</strong> Usuarios con ingresos medios.<br>
+                                    <strong>Distribución:</strong><br>
+                                    - 50% necesidades<br>
+                                    - 30% deseos<br>
+                                    - 20% ahorro<br>
+                                    <strong>Ventajas:</strong> Equilibrado y sostenible.<br>
+                                    <strong>Objetivo:</strong> Alcanzar metas financieras.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <a href="metodoMedio.html" class="btn btn-success w-100">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Método 70-20-10 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-white bg-dark border-light shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Método 70-20-10</h5>
+                                <p class="card-text">
+                                    <strong>Perfil:</strong> Usuarios con ingresos altos.<br>
+                                    <strong>Distribución:</strong><br>
+                                    - 70% necesidades<br>
+                                    - 20% inversión<br>
+                                    - 10% ahorro<br>
+                                    <strong>Ventajas:</strong> Fomenta inversión.<br>
+                                    <strong>Objetivo:</strong> Generar riqueza y estabilidad.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <a href="metodoMayor.html" class="btn btn-success w-100">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer d-flex justify-content-between align-items-center px-4">
+            <a href="contactForm.html" class="d-flex align-items-center gap-2 text-white text-decoration-none">
+                <i class="fa-regular fa-comments"></i>
+                <span>Contacta con Nosotros</span>
+            </a>
+            <div class="d-flex align-items-center gap-2">
+                <i class="fa-regular fa-registered"></i>
+                <span>FinanSmart - UFV</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="..."
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/home.js"></script>
+
+</html>

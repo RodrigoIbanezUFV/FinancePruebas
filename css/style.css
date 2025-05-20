@@ -1,0 +1,362 @@
+/* ==== Estilos generales ==== */
+html,
+body {
+    height: 100%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 60px 30px 40px 30px;
+    /* puedes ajustar el padding superior aquí */
+}
+
+
+/* Navbar fija arriba */
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    /* Asegura que esté por encima de todo */
+    width: 100%;
+}
+
+body {
+    background-color: #212529;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    /* Ajusta según la altura de tu navbar */
+}
+
+/* ==== Navbar ==== */
+.navbar {
+    background-color: #212529 !important;
+    padding: 12px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+}
+
+.btn-nav {
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.btn-nav:hover {
+    background-color: #2e3339;
+    color: white;
+    border-color: #181b1e;
+}
+
+.btn-nav.active {
+    background-color: #187444;
+    color: white;
+    border-color: #ffffff;
+}
+
+
+/* ==== Contenido principal ==== */
+.main-content {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+.main-content h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* ==== Estilo común para tarjetas ==== */
+.card,
+.user-card {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 60px auto;
+    width: 80%;
+    max-width: 1100px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==== Nueva Entrada ==== */
+.send {
+    background-color: #187444;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 12px 0;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease-in-out;
+    width: 520px;
+    /* MISMO ANCHO que una tarjeta */
+    max-width: 520px;
+    margin: auto;
+    display: block;
+}
+
+.send:hover {
+    background-color: #125734;
+}
+
+/* Campos del formulario */
+.campo-formulario {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 15px;
+    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Título coherente */
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ==== Notificaciones ==== */
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.notification h5 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.notification p {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #187444;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: #000;
+}
+
+.msg-switch {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #187444;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ==== Datos de usuario (user-card) ==== */
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #111;
+    margin-bottom: 0px;
+    /* <-- reducido */
+    text-align: left;
+}
+
+.section-group {
+    margin-top: 0;
+    /* <-- quitamos espacio extra por si acaso */
+}
+
+
+/* Fila de datos */
+.data-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.data-row label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.data-row span.static-field {
+    background-color: #e0e0e0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: #333;
+}
+
+.data-row input[type="text"],
+.data-row input[type="number"] {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* ==== Botones tipo radio ==== */
+.btn-check:checked+.btn-outline-success,
+.btn-check:checked+.btn-outline-secondary {
+    background-color: #187444;
+    color: white;
+    border-color: #187444;
+}
+
+.btn-outline-success,
+.btn-outline-secondary {
+    font-weight: 600;
+    padding: 6px 20px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    margin-right: 5px;
+    border-radius: 6px;
+}
+
+.btn-outline-success:hover,
+.btn-outline-secondary:hover {
+    background-color: #187444;
+    color: white;
+    border-color: #1f9a5a;
+}
+
+/* ==== Contenedor de 2 columnas (Datos personales / financieros -> USER) ==== */
+.data-row span.static-field {
+    background-color: #e0e0e0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    justify-content: flex-start;
+    /* <-- ALINEACIÓN IZQUIERDA */
+    align-items: center;
+    /* <-- CENTRADO VERTICAL */
+    text-align: left;
+}
+
+.user-data-balanced {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    /* Reducción del espacio entre tarjetas */
+    flex-wrap: wrap;
+}
+
+.user-data-balanced .user-card {
+    flex: 1 1 520px;
+    max-width: 520px;
+    margin: 0;
+    /* Elimina margen que añadía separación extra */
+}
+
+
+/* Botón central alineado con tarjetas */
+.modify-btn {
+    background-color: #187444;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 12px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+    width: 520px;
+    /* MISMO ANCHO que una tarjeta */
+    max-width: 520px;
+    margin: auto;
+    display: block;
+}
+
+
+.modify-btn:hover {
+    background-color: #135533;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .user-data-balanced {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modify-btn {
+        width: 80%;
+    }
+}
+
+/* ==== Footer ==== */
+.footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 20px 30px;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: auto;
+    /* hace que el footer se empuje al final */
+}
+
+.footer i {
+    font-size: 16px;
+}
+
+.footer img {
+    vertical-align: middle;
+}

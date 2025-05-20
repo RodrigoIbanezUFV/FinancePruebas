@@ -1,0 +1,13 @@
+# Archivos del entorno de desarrollo
+.idea/
+.vscode/
+node_modules/
+target/
+*.log
+
+# Archivos de configuración local
+application.properties
+application.yml
+
+# Docker y dependencias
+docker-compose.override.yml

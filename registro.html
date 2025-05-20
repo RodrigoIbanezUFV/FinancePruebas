@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="css/register.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+</head>
+<body>
+  <div class="container">
+    <div class="login-card">
+      <div class="form-side">
+        <h1>Registro</h1>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="name">Nombre <span class="required">•</span></label>
+            <input type="text" id="name" name="name" autocomplete="name">
+            <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="username">Username <span class="required">•</span></label>
+            <input type="text" id="username" name="username" autocomplete="username">
+            <span class="error-message" id="username-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="required">•</span></label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña <span class="required">•</span></label>
+            <div class="password-input">
+              <input type="password" id="password" name="password" autocomplete="new-password">
+              <button type="button" id="toggle-password" class="toggle-password" aria-label="Mostrar contraseña">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+            <span class="error-message" id="password-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirmar contraseña <span class="required">•</span></label>
+            <div class="password-input">
+              <input type="password" id="confirm-password" name="confirm-password" autocomplete="new-password">
+              <button type="button" id="toggle-confirm-password" class="toggle-password" aria-label="Mostrar contraseña">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+            <span class="error-message" id="confirm-password-error"></span>
+          </div>
+          <button type="submit" id="register-button" class="login-button">Regístrate</button>
+          <div class="register-link">
+            <p>¿Ya tienes cuenta? <a href="login.html">Login</a></p>
+          </div>
+        </form>
+        <div id="form-message" class="form-message"></div>
+      </div>
+      <div class="image-side"></div>
+    </div>
+  </div>
+  <script src="js/register_script.js"></script>
+</body>
+</html>
