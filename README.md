@@ -24,7 +24,7 @@ Aquí tienes el contenido base del **README.md** para tu proyecto **FinanSmart**
 ## 🚀 **Tecnologías Utilizadas**
 
 🔹 **Frontend:** HTML, CSS, JavaScript  
-🔹 **Gestión del Proyecto:** Scrum y Outlook Calendar  
+🔹 **Gestión del Proyecto:** Scrum y Google Calendar  
 🔹 **Control de Versiones:** Git y GitHub  
 🔹 **Entorno de Desarrollo:** VSCode
 🔹 **Despliegue Final:** Empleo de GitHub Pages
@@ -46,14 +46,14 @@ Aquí tienes el contenido base del **README.md** para tu proyecto **FinanSmart**
 
 ## 🔧 **Configuración y Ejecución**
 
-### **1️⃣ Clonar el Repositorio**
+### **1 Clonar el Repositorio**
 
 ```bash
 git clone https://github.com/TU-USUARIO/FinanSmart.git
 cd FinanSmart
 ```
 
-### **2️⃣ Ejecutar la Aplicación**
+### **2 Ejecutar la Aplicación**
 
 Simplemente abre el archivo `index.html` en cualquier navegador web.
 
@@ -61,19 +61,19 @@ Simplemente abre el archivo `index.html` en cualquier navegador web.
 
 ## 📌 **Gestión del Código con Git**
 
-🔹 **Rama principal (`main`)** → Código estable y listo para producción.  
-🔹 **Rama de desarrollo (`develop`)** → Funcionalidades en desarrollo.  
-🔹 **Ramas de características (`feature/*`)** → Desarrollo de nuevas funciones.
+   **Rama principal (`main`)** → Código estable y listo para producción.  
+   **Rama de desarrollo (`develop`)** → Funcionalidades en desarrollo.  
+   **Ramas de características (`feature/*`)** → Desarrollo de nuevas funciones.
 
-💡 **Reglas de commits:**  
-✔️ Usa mensajes claros y descriptivos (`git commit -m "Añadida página de registro de usuarios"`).  
-✔️ Crea _pull requests_ antes de fusionar a `develop` o `main`.
+   **Reglas de commits:**  
+      Usa mensajes claros y descriptivos (`git commit -m "Añadida página de registro de usuarios"`).  
+      Crea _pull requests_ antes de fusionar a `develop` o `main`.
 
 ---
 
 ## 🤝 **Equipo de Desarrollo**
 
-🔲 **Sprint 1** - Diseño inicial y estructura básica ✅
+🔲 **Sprint 1** - Diseño inicial y estructura básica 
 
 | Nombre                       | Rol                         |
 | ---------------------------- | --------------------------- |
@@ -83,7 +83,7 @@ Simplemente abre el archivo `index.html` en cualquier navegador web.
 | **Cayetana Díaz**            | Analista y documentación    |
 | **Rodrigo Ibáñez**           | Scrum Master y Tester       |
 
-🔲 **Sprint 2** - Implementación de funcionalidades básicas 🔄
+🔲 **Sprint 2** - Implementación de funcionalidades básicas 
 
 | Nombre                       | Rol                         |
 | ---------------------------- | --------------------------- |
@@ -93,7 +93,7 @@ Simplemente abre el archivo `index.html` en cualquier navegador web.
 | **Cayetana Díaz**            | Analista y documentación    |
 | **Rodrigo Ibáñez**           | Scrum Master y Tester       |
 
-🔲 **Sprint 3** - Integración de funcionalidades avanzadas 🔜
+🔲 **Sprint 3** - Integración de funcionalidades avanzadas 
 
 | Nombre                       | Rol                         |
 | ---------------------------- | --------------------------- |
@@ -103,7 +103,7 @@ Simplemente abre el archivo `index.html` en cualquier navegador web.
 | **Cayetana Díaz**            | Analista y documentación    |
 | **Rodrigo Ibáñez**           | Scrum Master y Tester       |
 
-🔲 **Sprint 4** - Pruebas, optimización y despliegue final 🔜
+🔲 **Sprint 4** - Pruebas, optimización y despliegue final 
 
 | Nombre                       | Rol                         |
 | ---------------------------- | --------------------------- |
