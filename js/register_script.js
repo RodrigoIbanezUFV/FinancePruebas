@@ -142,7 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
         formMsg.textContent = '¡Registro exitoso! Redirigiendo…';
         formMsg.classList.add('success');
         // aquí podrías redirigir de verdad
+      setTimeout(() => {
+        window.location.href = 'login.html';
       }, 1500);
+    }, 1500);
     });
   });
   
