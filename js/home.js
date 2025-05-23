@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       datasets: [{
         label: 'Ahorros por mes (€)',
         data: ahorroData.map(e => e.cantidad),
-        backgroundColor: '#0EAF21'
+        backgroundColor: '#187444'
       }]
     },
     options: {
