@@ -82,6 +82,13 @@ body {
     padding: 30px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     color: white;
+
+    /* 🔧 Añade estas dos líneas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px;
+    /* Puedes ajustar la altura según necesites */
 }
 
 .grafica-section h3,

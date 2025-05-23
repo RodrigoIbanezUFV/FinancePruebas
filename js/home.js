@@ -1,15 +1,31 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const userData = await getUserData(); // ← función backend que ya hay
-  const ahorroData = await getAhorrosMensuales(); // ← array de objetos tipo {mes, cantidad}
+document.addEventListener("DOMContentLoaded", () => {
+  // Datos simulados del usuario
+  const userData = {
+    nombre: "Rodrigo",
+    apellido: "Ibáñez",
+    metodo_ahorro: "Método 50 - 30 - 20",
+    total_ahorrado: 1260
+  };
 
-  // Saludo personalizado
-  document.getElementById("user-nombre").textContent = `${userData.nombre} ${userData.apellido.split(" ")[0]}`;
+  // Datos simulados de ahorro mensual
+  const ahorroData = [
+    { mes: "Enero", cantidad: 120 },
+    { mes: "Febrero", cantidad: 140 },
+    { mes: "Marzo", cantidad: 100 },
+    { mes: "Abril", cantidad: 110 },
+    { mes: "Mayo", cantidad: 130 },
+    { mes: "Junio", cantidad: 130 },
+    { mes: "Julio", cantidad: 150 },
+    { mes: "Agosto", cantidad: 150 },
+    { mes: "Septiembre", cantidad: 130 },
+  ];
 
-  // Método recomendado
-  document.getElementById("metodo").innerHTML = `Método recomendado: <strong>${userData.metodo_ahorro}</strong>`;
+  // Inyectar nombre y método
+  document.getElementById("user-nombre").textContent = `${userData.nombre} ${userData.apellido}`;
+  document.getElementById("metodo").textContent = userData.metodo_ahorro;
   document.getElementById("total-ahorrado").textContent = `${userData.total_ahorrado}€`;
 
-  // Gráfico
+  // Dibujar gráfica simulada
   const ctx = document.getElementById("graficaAhorros").getContext("2d");
   new Chart(ctx, {
     type: 'bar',
@@ -18,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       datasets: [{
         label: 'Ahorros por mes (€)',
         data: ahorroData.map(e => e.cantidad),
-        backgroundColor: '#0EAF21'
+        backgroundColor: '#187444'
       }]
     },
     options: {
