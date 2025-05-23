@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Login Form</title>
+    <title>FinanSmart | Login</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="login-card">
-        <div class="form-side">
-            <h1>Login</h1>
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="email">Email<span class="required">*</span></label>
-                    <input type="email" id="email" name="email" autocomplete="email">
-                    <span class="error-message" id="email-error"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Password<span class="required">*</span></label>
-                    <div class="password-input">
-                        <input type="password" id="password" name="password" autocomplete="current-password">
-                        <button type="button" id="toggle-password" class="toggle-password" aria-label="Toggle password visibility">
-                            <i class="far fa-eye"></i>
-                        </button>
+    <div class="container">
+        <div class="login-card">
+            <div class="form-side">
+                <h1>Login</h1>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email<span class="required">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                        <span class="error-message" id="email-error"></span>
                     </div>
-                    <span class="error-message" id="password-error"></span>
-                </div>
 
-                <button type="submit" id="login-button" class="login-button">Login</button>
+                    <div class="form-group">
+                        <label for="password">Password<span class="required">*</span></label>
+                        <div class="password-input">
+                            <input type="password" id="password" name="password" autocomplete="current-password">
+                            <button type="button" id="toggle-password" class="toggle-password"
+                                aria-label="Toggle password visibility">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message" id="password-error"></span>
+                    </div>
 
-                <div class="register-link">
-                    <p>No tienes una cuenta? <a href="registro.html">Registrate</a></p>
-                </div>
-            </form>
-            <div id="form-message" class="form-message"></div>
-        </div>
-        <div class="image-side">
-            
+                    <button type="submit" id="login-button" class="login-button">Login</button>
+
+                    <div class="register-link">
+                        <p>No tienes una cuenta? <a href="registro.html">Registrate</a></p>
+                    </div>
+                </form>
+                <div id="form-message" class="form-message"></div>
+            </div>
+            <div class="image-side">
+
+            </div>
         </div>
     </div>
-</div>
-<script src="js/login_script.js"></script>
+    <script src="js/login_script.js"></script>
 </body>
+
 </html>
