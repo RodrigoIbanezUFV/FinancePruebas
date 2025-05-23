@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Datos simulados del usuario
   const userData = {
-    nombre: "Rodrigo",
-    apellido: "Ibáñez",
-    metodo_ahorro: "Método 50 - 30 - 20",
+    nombre: "Oscar",
+    apellido: "Sánchez",
+    metodo_ahorro: "Método del 10%",
     total_ahorrado: 1260
   };
 

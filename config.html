@@ -11,6 +11,53 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('entradaForm');
+    const ingresos = document.getElementById('ingresos');
+    const comida = document.getElementById('comida');
+    const ocio = document.getElementById('ocio');
+    const submitBtn = document.getElementById('submitBtn');
+
+    // Crear mensaje de error debajo del botón
+    const mensajeError = document.createElement('div');
+    mensajeError.className = 'form-message error mt-3';
+    mensajeError.style.display = 'none';
+    form.appendChild(mensajeError);
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      if (
+        ingresos.value.trim() === '' ||
+        comida.value.trim() === '' ||
+        ocio.value.trim() === ''
+      ) {
+        mensajeError.textContent = 'Por favor, rellena los tres primeros campos antes de continuar.';
+        mensajeError.style.display = 'block';
+        return;
+      }
+
+      mensajeError.style.display = 'none';
+      window.location.href = 'confirmData.html';
+    });
+
+    // Ocultar mensaje si el usuario empieza a escribir
+    [ingresos, comida, ocio].forEach(input => {
+      input.addEventListener('input', () => {
+        if (
+          ingresos.value.trim() !== '' &&
+          comida.value.trim() !== '' &&
+          ocio.value.trim() !== ''
+        ) {
+          mensajeError.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+
 <body>
   <div class="container-fluid">
     <!-- Header -->
@@ -73,12 +120,10 @@
               placeholder="Gastos en ocio de este mes..." required />
           </div>
           <div class="mb-4">
-            <input type="number" class="form-control campo-formulario" id="otros"
-              placeholder="Otros Gastos de este mes..." required />
+            <input type="number" class="form-control campo-formulario" id="otros" placeholder="Otros Gastos de este mes..." />
           </div>
 
-          <button type="submit" class="btn w-100 send" id="submitBtn"
-            onclick="event.preventDefault(); window.location.href='confirmData.html';">AÑADIR ENTRADA</button>
+          <button type="submit" class="btn w-100 send" id="submitBtn">AÑADIR ENTRADA</button>
         </form>
       </div>
 
@@ -137,3 +182,5 @@
 </body>
 
 </html>
+
+
