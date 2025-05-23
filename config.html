@@ -1,114 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Config FinanSmart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container-fluid">
-        <!-- Header -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top w-100">
-          <div class="container-fluid justify-content-between">
-            
-            <!-- Logo + Marca -->
-            <a class="navbar-brand d-flex align-items-center" href="home.html">
-              <img src="img/logo.png" alt="Logo FinanSmart" width="50" height="50" class="me-2">
-              <span class="fs-4 fw-bold">FinanSmart</span>
-            </a>
-        
-            <!-- Botón hamburguesa (responsive) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <!-- Opciones -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul class="navbar-nav d-flex align-items-center gap-2">
-                <li class="nav-item">
-                  <a class="nav-link btn-nav" href="home.html" id="nav-home">
-                    <i class="fa-solid fa-house"></i> HOME
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn-nav" href="user.html" id="nav-perfil">
-                    <i class="fa-solid fa-user"></i> PERFIL
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn-nav active" href="config.html" id="nav-config">
-                    <i class="fa-solid fa-gear"></i> CONFIGURACIÓN
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        
-  
-        <!-- Main Content -->
-        <main class="main-content">
-          <h2 class="main-title">Configuración</h2>
-        
-          <!-- NUEVA ENTRADA -->
-          <div class="user-card">
-            <form id="entradaForm" class="formulario-nueva-entrada">
-              <h4 class="section-title mb-3 text-center">Nueva Entrada:</h4>
-              <div class="mb-3">
-                <input type="number" class="form-control campo-formulario" id="ingresos" placeholder="Ingresos totales de este mes..." required />
-              </div>
-              <div class="mb-3">
-                <input type="number" class="form-control campo-formulario" id="comida" placeholder="Gastos en comida de este mes..." required />
-              </div>
-              <div class="mb-3">
-                <input type="number" class="form-control campo-formulario" id="ocio" placeholder="Gastos en ocio de este mes..." required />
-              </div>
-              <div class="mb-4">
-                <input type="number" class="form-control campo-formulario" id="otros" placeholder="Otros Gastos de este mes..." required />
-              </div>
-          
-                <button type="submit" class="btn w-100 send" id="submitBtn" onclick="event.preventDefault(); window.location.href='confirmDAta.html';">AÑADIR ENTRADA</button> 
-            </form>
-          </div>
-          
 
-          <!-- NOTIFICACIONES -->
-          <div class="card">
-            <h4 class="section-title text-center">Gestión de Notificaciones</h4>
-        
-            <div class="notification">
-              <div class="notification-text">
-                <h5>Notificaciones de ahorros</h5>
-                <p>Recibe actualizaciones relacionadas con movimientos en tus ahorros.</p>
-              </div>
-              <div>
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" id="notificacionesAhorros" checked>
-                  <label class="form-check-label" for="notificacionesAhorros">Notificaciones de ahorros activadas</label>
-                </div>
-                <div id="msgAhorros" class="msg-switch"></div>
-              </div>
-            </div>
-        
-            <div class="notification">
-              <div class="notification-text">
-                <h5>Notificaciones de metas</h5>
-                <p>Recibe actualizaciones cuando hayas logrado tu objetivo.</p>
-              </div>
-              <div>
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" id="notificacionesMetas" checked>
-                  <label class="form-check-label" for="notificacionesMetas">Notificaciones de metas activadas</label>
-                </div>
-                <div id="msgMetas" class="msg-switch"></div>
-              </div>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Config || FinanSmart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top w-100">
+      <div class="container-fluid justify-content-between">
+
+        <!-- Logo + Marca -->
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
+          <img src="img/logo.png" alt="Logo FinanSmart" width="50" height="50" class="me-2">
+          <span class="fs-4 fw-bold">FinanSmart</span>
+        </a>
+
+        <!-- Botón hamburguesa (responsive) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Opciones -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav d-flex align-items-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link btn-nav" href="home.html" id="nav-home">
+                <i class="fa-solid fa-house"></i> HOME
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-nav" href="user.html" id="nav-perfil">
+                <i class="fa-solid fa-user"></i> PERFIL
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-nav active" href="config.html" id="nav-config">
+                <i class="fa-solid fa-gear"></i> CONFIGURACIÓN
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h2 class="main-title">Configuración</h2>
+
+      <!-- NUEVA ENTRADA -->
+      <div class="user-card">
+        <form id="entradaForm" class="formulario-nueva-entrada">
+          <h4 class="section-title mb-3 text-center">Nueva Entrada:</h4>
+          <div class="mb-3">
+            <input type="number" class="form-control campo-formulario" id="ingresos"
+              placeholder="Ingresos totales de este mes..." required />
           </div>
-        </main>
-        
+          <div class="mb-3">
+            <input type="number" class="form-control campo-formulario" id="comida"
+              placeholder="Gastos en comida de este mes..." required />
+          </div>
+          <div class="mb-3">
+            <input type="number" class="form-control campo-formulario" id="ocio"
+              placeholder="Gastos en ocio de este mes..." required />
+          </div>
+          <div class="mb-4">
+            <input type="number" class="form-control campo-formulario" id="otros"
+              placeholder="Otros Gastos de este mes..." required />
+          </div>
+
+          <button type="submit" class="btn w-100 send" id="submitBtn"
+            onclick="event.preventDefault(); window.location.href='confirmData.html';">AÑADIR ENTRADA</button>
+        </form>
+      </div>
+
+
+      <!-- NOTIFICACIONES -->
+      <div class="card">
+        <h4 class="section-title text-center">Gestión de Notificaciones</h4>
+
+        <div class="notification">
+          <div class="notification-text">
+            <h5>Notificaciones de ahorros</h5>
+            <p>Recibe actualizaciones relacionadas con movimientos en tus ahorros.</p>
+          </div>
+          <div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="notificacionesAhorros" checked>
+              <label class="form-check-label" for="notificacionesAhorros">Notificaciones de ahorros activadas</label>
+            </div>
+            <div id="msgAhorros" class="msg-switch"></div>
+          </div>
+        </div>
+
+        <div class="notification">
+          <div class="notification-text">
+            <h5>Notificaciones de metas</h5>
+            <p>Recibe actualizaciones cuando hayas logrado tu objetivo.</p>
+          </div>
+          <div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="notificacionesMetas" checked>
+              <label class="form-check-label" for="notificacionesMetas">Notificaciones de metas activadas</label>
+            </div>
+            <div id="msgMetas" class="msg-switch"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
 
     <!-- Footer -->
     <footer class="footer d-flex justify-content-between align-items-center px-4">
@@ -123,7 +131,9 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="..."
+      crossorigin="anonymous"></script>
     <script src="js/newsletterConfig.js"></script>
-  </body>
+</body>
+
 </html>

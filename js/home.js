@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const userData = await getUserData(); // ← función backend que ya tienes
+  const userData = await getUserData(); // ← función backend que ya hay
   const ahorroData = await getAhorrosMensuales(); // ← array de objetos tipo {mes, cantidad}
-  
+
   // Saludo personalizado
   document.getElementById("user-nombre").textContent = `${userData.nombre} ${userData.apellido.split(" ")[0]}`;
 
